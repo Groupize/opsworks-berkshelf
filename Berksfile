@@ -1,3 +1,4 @@
 source "https://supermarket.getchef.com"
 
-cookbook 'getting-started'
+cookbook 'opsworks_delayed_job', git: 'git@github.com:Groupize/opsworks_delayed_job.git'
+
