@@ -8,8 +8,8 @@ node[:deploy].each do |application, deploy|
   template "#{node[:deploy][application][:deploy_to]}/shared/config/env_vars.rb" do
     source "env_vars.rb.erb"
     mode 0644
-    owner node[:deploy][:white_label][:user]
-    group node[:deploy][:white_label][:group]
+    owner node[:deploy][application][:user]
+    group node[:deploy][application][:group]
     ignore_failure true
   end
 end
